@@ -1,6 +1,6 @@
 Sure! Let's start with the basics of Java programming.
 
-#Lesson 1: Hello, World!
+# Lesson 1: Hello, World!
 
 In Java, the traditional "Hello, World!" program is often used as a starting point. It's a simple program that prints the text "Hello, World!" to the console. Here's how you can write it:
 
@@ -41,7 +41,7 @@ To run this program, follow these steps:
 Go ahead and try running this program. Once you've done that, type "continue" to move on to the next lesson.
 Great! Let's move on to the next lesson.
 
-#Lesson 2: Variables and Data Types
+# Lesson 2: Variables and Data Types
 
 Variables are used to store data in a program. In Java, you need to declare a variable before using it. Here's an example that demonstrates declaring and using variables of different data types:
 
@@ -98,7 +98,7 @@ The `System.out.println()` statement is used to print the values of the variable
 Save the code in a new file (e.g., VariablesExample.java), compile it with `javac VariablesExample.java`, and run it with `java VariablesExample`. You should see the variable values printed to the console.
 Excellent! Let's move on to the next lesson.
 
-#Lesson 3: Operators
+# Lesson 3: Operators
 
 Operators are used to perform operations on variables and values. Java supports various types of operators, including arithmetic, assignment, comparison, and logical operators.
 
@@ -218,7 +218,7 @@ Feel free to experiment with different values and operators. Type "continue" to 
 Try modifying the variable values and re-running the program. Then, type "continue" to proceed to the next lesson.
 Great! Let's move on to the next lesson.
 
-#Lesson 4: Control Structures
+# Lesson 4: Control Structures
 
 Control structures are used to control the flow of a program by making decisions or repeating certain blocks of code. In Java, we have if-else statements, switch statements, and loops.
 
@@ -313,7 +313,7 @@ Save the code in a new file (e.g., ControlStructuresExample.java), compile it wi
 Feel free to modify the code and experiment with different conditions and loop iterations. Type "continue" to proceed to the next lesson.
 Great! Let's move on to the next lesson.
 
-#Lesson 5: Classes and Objects
+# Lesson 5: Classes and Objects
 
 Java is an object-oriented programming language, which means that programs are built from classes and objects. A class defines a blueprint for creating objects, and an object is an instance of a class.
 
@@ -392,7 +392,7 @@ Save the code in two separate files: Car.java (containing the Car class) and Cla
 Feel free to add more attributes and methods to the Car class and create additional Car objects. Type "continue" to proceed to the next lesson.
 Great! Let's move on to the next lesson.
 
-#Lesson 6: Methods
+# Lesson 6: Methods
 
 Methods are used to perform actions in a program. They encapsulate a set of instructions that can be invoked and reused throughout the code. In Java, methods are defined within a class.
 
@@ -463,7 +463,7 @@ Save the code in a new file (e.g., MethodsExample.java), compile it with `javac 
 Feel free to create additional methods and experiment with different parameters and return types. Type "continue" to proceed to the next lesson.
 Great! Let's move on to the next lesson.
 
-#Lesson 7: Arrays
+# Lesson 7: Arrays
 
 Arrays are used to store multiple values of the same data type in Java. They provide a way to group related data together. Each element in an array can be accessed using its index.
 
@@ -659,7 +659,7 @@ Save the code in three separate files: Animal.java (containing the Animal class)
 Feel free to modify the class hierarchies, add additional methods and attributes, and explore more OOP concepts. Type "continue" to proceed to the next lesson.
 Great! Let's move on to the next lesson.
 
-#Lesson 9: Exception Handling
+# Lesson 9: Exception Handling
 
 Exception handling is a mechanism in Java that allows you to handle and recover from runtime errors. It helps you write code that can gracefully handle unexpected situations and prevent your program from crashing.
 
@@ -714,7 +714,7 @@ Save the code in a new file (e.g., ExceptionHandlingExample.java), compile it wi
 Feel free to experiment with different types of exceptions, catch multiple exceptions, and explore more advanced exception handling techniques. Type "continue" to proceed to the next lesson.
 Great! Let's move on to the next lesson.
 
-#Lesson 10: File Input and Output
+# Lesson 10: File Input and Output
 
 Java provides classes and methods to perform file input and output operations, allowing you to read from and write to files.
 
@@ -797,7 +797,7 @@ Save the code in a new file (e.g., FileInputOutputExample.java), compile it with
 Feel free to modify the file names, paths, and the content being written or read. You can also explore more advanced file handling operations and techniques. Type "continue" to proceed to the next lesson.
 Great! Let's move on to the next lesson.
 
-#Lesson 11: Java Collections
+# Lesson 11: Java Collections
 
 Java provides a set of built-in classes and interfaces known as collections that allow you to store, manipulate, and process groups of objects. Collections offer various data structures, such as lists, sets, and maps, to cater to different needs.
 
