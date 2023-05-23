@@ -530,7 +530,7 @@ Save the code in a new file (e.g., ArraysExample.java), compile it with `javac A
 Feel free to modify the array values and experiment with different array operations. Type "continue" to proceed to the next lesson.
 Great! Let's move on to the next lesson.
 
-#Lesson 8: Object-Oriented Programming Concepts - Encapsulation and Inheritance
+# Lesson 8: Object-Oriented Programming Concepts - Encapsulation and Inheritance
 
 Object-oriented programming (OOP) in Java involves several key concepts. In this lesson, we'll cover two important concepts: encapsulation and inheritance.
 
