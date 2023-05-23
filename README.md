@@ -1,81 +1,357 @@
-# Normalization: Making Data Shine!
+## Object-Oriented Programming (OOP) in Java 
 
-Welcome to the world of normalization! 🌟 Get ready to transform your database into a shining example of efficiency and elegance. We'll guide you through the process step by step, ensuring your data sparkles with beauty and integrity. Let's dive in and discover the magic of normalization!
+Object-Oriented Programming (OOP) is a programming paradigm that revolves around the concept of objects, which are instances of classes. Java is a popular programming language that fully supports OOP principles. In this summary, we'll explore the core concepts of OOP in Java and provide examples to illustrate each concept.  ### Classes and Objects  In Java, a class is a blueprint or template that defines the structure and behavior of objects. An object is an instance of a class, representing a specific entity. For example, we can define a class called "Car" with attributes like color, model, and speed. We can then create multiple car objects based on this class.  
 
-## Leveling Up with Normal Forms
+```java
 
-Normalization is like a superhero's transformation, taking your data from its raw form to higher normal forms. Each normal form brings more structure and eliminates redundancies, making your database super efficient and easy to maintain. Let's explore the different levels of normal forms:
+class Car {
 
-**First Normal Form (1NF):** This is the foundation of normalization. It ensures that each attribute contains atomic values, and there is a unique identifier for each record. Think of it as separating the wheat from the chaff.
+    String color;
 
-**Second Normal Form (2NF):** Building upon 1NF, 2NF tackles partial dependencies. It ensures that each non-key attribute depends on the entire primary key, eliminating any half-hearted dependencies.
+    String model;
 
-**Third Normal Form (3NF):** Ah, the bliss of 3NF! It takes care of transitive dependencies, making sure that no attribute depends on another non-key attribute. It's like untangling a web of dependencies.
+    int speed;
 
-**Beyond 3NF:** There are even higher normal forms like Boyce-Codd Normal Form (BCNF) and Fourth Normal Form (4NF) that address more complex scenarios. They are like the grandmasters of normalization, handling intricate relationships with finesse.
+    void accelerate() {
 
-## Unleashing the Power of Decomposition
+        // Code to increase the car's speed
 
-Decomposition is our secret weapon for achieving normalization. It's the art of breaking down larger tables into smaller, well-structured ones. By doing so, we eliminate redundancy, enhance data integrity, and make database maintenance a breeze. Here's how we wield this power:
+    }
 
-1. **Identify Functional Dependencies:** We scrutinize the relationships between attributes to determine how they depend on each other. This helps us understand the essence of your data.
+}
 
-2. **Decompose Based on Dependencies:** Armed with knowledge, we skillfully split the tables, creating smaller ones that represent the identified dependencies. We separate the wheat from the chaff, keeping things neat and tidy.
+// Creating objects of the Car class
 
-3. **Assign Primary Keys:** Every hero needs an identity, and in our database world, it's the primary key. We assign unique identifiers to each table, ensuring they shine brightly.
+Car car1 = new Car();
 
-4. **Establish Relationships:** Just like superheroes team up, our decomposed tables establish relationships with each other. Foreign keys are the bonds that reflect the dependencies among the tables, ensuring they work together seamlessly.
+Car car2 = new Car();`
 
-## Preserving the Beauty of Functional Dependencies
+```
 
-Throughout the decomposition process, we ensure the beauty of functional dependencies remains intact. We take great care to:
+### Encapsulation
 
-1. **Preserve Dependencies:** Each functional dependency is represented and maintained in the decomposed tables. We don't let any dependency fade away.
+Encapsulation ensures that data (variables) and methods (functions) that operate on the data are bundled together within a class, and access to them is controlled through methods. This provides data hiding and protects the integrity of the data.
 
-2. **Join Without Loss:** We verify that joining the decomposed tables brings back the same information as the original relation. We don't let any data vanish into thin air.
+```java
 
-## Let's Bring it to Life: A Decomposition Exercise
+class BankAccount {
 
-To illustrate the power of decomposition, let's embark on a thrilling exercise. Imagine a table called "Employees" with attributes like employee_id, employee_name, department_id, and department_name. Brace yourself as we transform it into a masterpiece of normalized tables:
+    private double balance;
 
-**Original Relation: Employees**
-- employee_id (Primary Key)
-- employee_name
-- department_id
-- department_name
+    public void deposit(double amount) {
 
-**Decomposed Tables:**
-Table: Employees
-- employee_id (Primary Key)
-- employee_name
-- department_id (Foreign Key referencing the Departments table)
+        // Code to deposit the given amount into the account
 
-Table: Departments
-- department_id (Primary Key)
-- department
+    }
 
-_name
+    public double getBalance() {
 
-Behold! We've created two tables that not only eliminate redundancies but also establish a meaningful relationship between employees and their respective departments. Now your database can shine brightly!
+        // Code to retrieve the account balance 
 
-## SQL Magic: Expressions That Enchant
+    }
 
-In the enchanted land of SQL, we can cast spells to summon data with the power of expressions. Let's explore the SQL counterparts of the relational algebra operations:
+}
 
-1. **Selection (σ):**
-   `SELECT * FROM Employees WHERE age > 30;`
+BankAccount account = new BankAccount();
 
-2. **Projection (π):**
-   `SELECT employee_name, department_id FROM Employees;`
+account.deposit(100.0);
 
-3. **Join (⨝):**
-   `SELECT * FROM Employees JOIN Departments ON Employees.department_id = Departments.department_id;`
+double balance = account.getBalance();
 
-4. **Union (∪):**
-   `SELECT * FROM Students UNION SELECT * FROM Professors;`
+```
 
-With these magical SQL incantations, you can conjure precisely the data you desire!
+### Inheritance
 
-## Let Your Database Sparkle!
+Inheritance allows classes to inherit properties and methods from other classes, creating a hierarchical relationship between classes. The class that is inherited from is called the superclass (or parent class), and the class that inherits is called the subclass (or child class).
 
-Normalization is the path to a truly dazzling database. By following the principles of normalization, unleashing the power of decomposition, and wielding SQL expressions, you can transform your data into a masterpiece of elegance and efficiency. Embrace the beauty of normalization, and let your database shine! ✨
+```java
+
+class Animal {
+
+    void eat() {
+
+        // Code for eating
+
+    }
+
+}  
+
+class Cat extends Animal {
+
+    void meow() {
+
+        // Code for meowing
+
+    }
+
+}
+
+Cat cat = new Cat(); cat.eat();
+
+// Inherited method
+
+cat.meow(); // Method specific to the Cat class
+
+```
+
+### Polymorphism
+
+Polymorphism allows objects of different classes to be treated as objects of a common superclass, enabling methods to be invoked dynamically at runtime. Polymorphism is achieved through method overriding and method overloading.
+
+```java
+
+class Animal {
+
+    void makeSound() {
+
+        // Code to make a generic animal sound
+
+    }
+
+}
+
+class Dog extends Animal {
+
+    void makeSound() {
+
+        // Code to make a dog-specific sound
+
+    }
+
+}
+
+class Cat extends Animal {
+
+    void makeSound() {
+
+        // Code to make a cat-specific sound
+
+    }
+
+}
+
+Animal animal1 = new Dog(); Animal animal2 = new Cat(); animal1.makeSound();  // Executes the Dog class's makeSound() method
+
+animal2.makeSound();  // Executes the Cat class's makeSound() method`
+
+```
+
+### Abstraction
+
+Abstraction focuses on providing simplified interfaces for complex systems by hiding unnecessary implementation details. Abstract classes and interfaces are used to define abstract types, which cannot be instantiated but can be extended or implemented by other classes.
+
+```java
+
+abstract class Shape {
+
+    abstract void draw();
+
+}
+
+class Circle extends Shape {
+
+    void draw() {
+
+        // Code to draw a circle
+
+    }
+
+}
+
+class Rectangle extends Shape {
+
+    void draw() {
+
+        // Code to draw a rectangle
+
+    }
+
+}
+
+Shape shape1 = new Circle(); 
+
+Shape shape2 = new Rectangle();
+
+shape1.draw();  // Draws a circle shape2.draw();  // Draws a rectangle`
+
+```
+
+These are the fundamental concepts of OOP in Java.
+
+## Abstract Classes and Interfaces
+
+Abstract classes and interfaces are key components of object-oriented programming in Java that facilitate abstraction and provide a way to define common behaviors and contracts for classes.
+
+### Abstract Classes
+
+An abstract class in Java is a class that cannot be instantiated directly and is typically used as a base class for other classes. It serves as a blueprint for its subclasses by defining common attributes and methods. An abstract class can have both abstract and non-abstract methods.
+
+```java
+
+abstract class Animal {
+
+    String name;
+
+    public Animal(String name) {
+
+        this.name = name;
+
+    }
+
+    abstract void sound(); // Abstract method
+
+    void sleep() {
+
+        System.out.println("The animal is sleeping.");
+
+    }
+
+}
+
+class Dog extends Animal {
+
+    public Dog(String name) {
+
+        super(name);
+
+    }
+
+    void sound() {
+
+        System.out.println("The dog barks.");
+
+    }
+
+}
+
+Animal dog = new Dog("Buddy"); dog.sound(); // Output: "The dog barks." 
+
+dog.sleep(); // Output: "The animal is sleeping."`
+
+```
+
+### Interfaces
+
+An interface in Java defines a contract that specifies a set of methods that implementing classes must adhere to. It represents a collection of abstract methods and constant (static final) variables. In essence, an interface defines what a class should do, without specifying how it should be done.
+
+```java
+
+interface Shape {
+
+    double getArea(); // Abstract method
+
+    double getPerimeter(); // Abstract method
+
+}
+
+class Circle implements Shape {
+
+    double radius;
+
+    public Circle(double radius) {
+
+        this.radius = radius;
+
+    }
+
+    public double getArea() {
+
+        return Math.PI * radius * radius;
+
+    }
+
+    public double getPerimeter() {
+
+        return 2 * Math.PI * radius;
+
+    }
+
+}
+
+Shape circle = new Circle(5.0);
+
+System.out.println("Area: " + circle.getArea()); // Output: "Area: 78.53981633974483" 
+
+System.out.println("Perimeter: " + circle.getPerimeter()); // Output: "Perimeter: 31.41592653589793"
+
+```
+
+Interfaces provide a way to achieve abstraction, promote code reusability, and allow classes to be loosely coupled by programming to interfaces rather than concrete implementations.
+
+### Inheritance and Overrides
+
+Inheritance allows a class to inherit properties and behaviors from its superclass. The `super()` keyword is used to call the constructor of the superclass. Method overriding allows a subclass to provide its own implementation of a method that is already defined in its superclass.
+
+```java
+
+class Vehicle {
+
+    protected String brand;
+
+    public Vehicle(String brand) {
+
+        this.brand = brand;
+
+    }
+
+    public void start() {
+
+        System.out.println("Starting the vehicle.");
+
+    }
+
+}  
+
+class Car extends Vehicle {
+
+    private int numberOfDoors;
+
+    public Car(String brand, int numberOfDoors) {
+
+        super(brand); // Calling the superclass constructor
+
+        this.numberOfDoors = numberOfDoors;
+
+    }
+
+    public void drive() {
+
+        System.out.println("Driving the car.");
+
+    }
+
+}
+
+Car myCar = new Car("Toyota", 4); myCar.start(); // Output: "Starting the vehicle." 
+
+myCar.drive(); // Output: "Driving the car."  
+
+class Animal {
+
+    public void makeSound() {
+
+        System.out.println("The animal makes a sound.");
+
+    }
+
+}
+
+class Cat extends Animal {
+
+    @Override
+
+    public void makeSound() {
+
+        System.out.println("The cat meows.");
+
+    }
+
+}
+
+Cat myCat = new Cat(); myCat.makeSound(); // Output: "The cat meows."
+
+```
+
+Inheritance and method overriding allow subclasses to extend or modify the behavior inherited from the superclass, providing flexibility and customization in the code.
+
+This covers the summary of inheritance, abstract classes, interfaces, and related concepts in Java.
